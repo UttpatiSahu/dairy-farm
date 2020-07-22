@@ -5,7 +5,7 @@ body{
     background-image: url('milk.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: gainsboro;
+    background-color: white;
 }
 main{
     padding-top: auto;
@@ -61,6 +61,59 @@ header{
     font-size: 18px;
     float: right;
 }
+#text{
+    padding-top: 250px;
+    text-align: center;
+}
+#text1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    text-align: justify;
+    padding-left: 27%;
+}
+#number{ 
+    background-color: rgb(53, 150, 206);
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 40vh;
+    height: 100vh;
+    background-image: url('cow\ head.png');
+    background-size: cover;
+    background-position: left;
+    background-repeat: repeat;
+}
+#pick{
+    background-color: white;
+    border-radius: 5px;
+    margin: 40px 60px 20px 60px;
+    padding: 10px 0px;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#count{
+    background-color: white;
+    text-align: center;
+    height: 210px;
+    padding-top: 50px;
+    margin: 0px 120px;
+    font-size: 30px;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#count1{
+    margin: 30px 60px;
+}
+#drop{
+    font-size: 33px;
+    color: rgb(4, 160, 212);
+}
+#milk{
+    background-color: rgb(37, 37, 247);
+    color: white;
+    padding: 4px;
+    border-radius: 2px;
+}
 #menu{
     display: none;
     width: 400px;
@@ -69,6 +122,7 @@ header{
     box-shadow: 0 2px 10px grey;
     position: absolute;
     right: 0px;
+    top: 0px;
     text-align: center;
     background-color: black;
     border-radius: 5px;
@@ -86,7 +140,7 @@ header{
     width: 100px;
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid gray;
     color: white;
 }
 #menu-item{
@@ -102,42 +156,19 @@ header{
     }
 }
 #img{
-    float: right;
-    height: 320px;
+    margin-top: 0px;
+    height: 330px;
     width: 400px;
-    padding-top: 110px;
-    animation: slide 3s  ease-in 1;
+    float: right;
+    margin-right: 40px;
 }
 #icon{
     display: none;
 }
-@keyframes slide{
-    0%{
-        padding-top: 0px;
-    }
-    100%{
-        padding-top: 110px;
-    }
-}
-#text{
-    text-align: center;
-    font-size: 40px;
-    padding: 70px 30px 0px 30px;
-    height: 100%;
-}
-#simple{
-    color: rgb(1, 194, 1);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 45px;
-}
-#moo{
-    color: rgb(1, 194, 1);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 #change{
-    color: rgb(1, 194, 1);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 45px;
+    color: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 65px;
 }
 #div1{
     display: grid;
@@ -147,7 +178,22 @@ header{
     grid-gap: 5px;
     font-size: 20px;
     width: 100%;
+    padding-top: 20px;
 }
+#arrow {
+    font-size: 50px;
+    float: inline-end;
+    margin-top: 330px;
+    animation: drop 0.7s ease-in-out alternate-reverse infinite;
+}
+@keyframes drop{
+    0%{
+        padding-top: 0px;
+    }
+    100%{
+        padding-top: 10px;
+    }
+}  
 section{
     height: 100vh;
     width: 100%;
@@ -167,7 +213,7 @@ section{
     }
 }
 #grid{
-    background-color:rgb(4, 196, 4);
+    background-color:rgb(1, 41, 1);
     border-radius: 5px;
     color: white;
     text-align: center;
@@ -175,56 +221,70 @@ section{
     padding-bottom: 30px;
     font-size: 30px;
     margin-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 h3{
     text-align: center;
     font-size: 30px;
 }
+h2{
+    text-align: center;
+    background-color: gray;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
 @media only screen and (max-width: 1270px) and (min-width: 901px){
     header{
-        height: 100px;
+        height: 80px;
+    }
+    body{
+        background-size: contain;
+    }
+    #number{
+        grid-template-columns: auto auto;
+        padding-top: 30vh;
+        height: 80vh;
+    }
+    #count1{
+        margin: 0px;
+    }
+    #count{
+        margin: 0px 35px;
+    }
+    #units{
+        text-align: center;
+        font-size: 20px;
+        margin: 0px 10px;
+        padding: 20px 10px;
+        display: grid;
+        grid-template-columns: auto ;
     }
     #icon{
         display: block;
         position: relative;
-        top: 30px;
+        top: 25px;
         padding-right: 25px;
         font-size: 28px;
         float: right;
     }
-    #div1{
-        grid-template-columns: auto;
-    }
-    #change{
-        font-size: 40px;
-    }
-    #moo{
-        font-size: 40px;
-    }
-    #simple{
-        font-size: 40px;
+    #img{
+        height: 380px;
+        width: 400px;
+        float: right;
     }
     #text{
-        padding-top: 150px;
-        font-size: 40px;
+        padding-top: 250px;
+    }
+    #change{
+        font-size: 55px;
     }
     #text1{
-        padding-bottom: 20px;
+        font-size: 40px;
     }
-    #img{
-        float: right;
-        height: 260px;
-        width: 300px;
-        padding-top: 80px;
-        animation: slide 3s  ease-in 1;
-    }
-    @keyframes slide{
-        0%{
-            padding-top: 0px;
-        }
-        100%{
-            padding-top: 80px;
-        }
+    #arrow{
+        font-size: 40px;
+        margin-top: 380px;
     }
     #share{
         display: none;
@@ -257,39 +317,45 @@ h3{
         font-size: 30px;
         float: right;
     }
-    #div1{
+    #number{
         grid-template-columns: auto;
+        padding-top: 130px;
+        height: 100vh;
+        grid-gap: 0px;
     }
-    #change{
-        font-size: 40px;
+    #count1{
+        margin: 0px;
     }
-    #moo{
-        font-size: 40px;
+    #pick{
+        margin-top: 0px;
     }
-    #simple{
-        font-size: 40px;
+    #count{
+        margin: 0px 30px;
     }
     #text{
-        padding-top: 100px;
-        font-size: 40px;
+        padding-top: 170px;
+        text-align: center;
+    }
+    #change{
+        font-size: 55px;
     }
     #text1{
-        padding-bottom: 40px;
+        font-size: 40px;
+        text-align: center;
+        padding-left: 0%;
+    }
+    #arrow{
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    body{
+        background-size: contain;
     }
     #img{
-        float: right;
-        height: 260px;
-        width: 300px;
-        padding-top: 80px;
-        animation: slide 3s  ease-in 1;
-    }
-    @keyframes slide{
-        0%{
-            padding-top: 0px;
-        }
-        100%{
-            padding-top: 80px;
-        }
+        margin-top: 150px;
+        height: 360px;
+        width: 340px;
+        float: none;
     }
     #share{
         display: none;
@@ -312,49 +378,65 @@ h3{
 }
 @media only screen and (max-width: 499px) and (min-width: 200px){
     header{
-        height: 60px;
+        height: 40px;
     }
     #icon{
         display: block;
         position: relative;
-        top: 18px;
+        top: 8px;
         padding-right: 25px;
-        font-size: 18px;
+        font-size: 25px;
         float: right;
     }
-    #div1{
+    #number{
         grid-template-columns: auto;
+        padding-top: 100px;
+        height: 100vh;
     }
-    #change{
+    #pick{
+        margin: 20px 5px;
+        font-size: 16px;
+    }
+    #count1{
+        margin-top: 0px;
+    }
+    #count{
         font-size: 20px;
+        height: 180px;
+        margin: 0px 30px;
     }
-    #moo{
-        font-size: 20px;
+    #arrow{
+        margin-top: 10px;
+        font-size: 30px;
+        animation: drop 0.7s ease-in-out alternate-reverse infinite;
     }
-    #simple{
-        font-size: 20px;
-    }
-    #text{
-        padding-top: 70px;
-        font-size: 20px;
-    }
-    #text1{
-        padding-bottom: 10px;
-    }
-    #img{
-        float: right;
-        height: 140px;
-        width: 200px;
-        padding-top: 55px;
-        animation: slide 3s  ease-in 1;
-    }
-    @keyframes slide{
+    @keyframes drop{
         0%{
             padding-top: 0px;
         }
         100%{
-            padding-top: 55px;
+            padding-top: 10px;
         }
+    }  
+    body{
+        background-size: contain;
+    }
+    #text{
+        padding-top: 110px;
+    }
+    #change{
+        font-size: 45px;
+    }
+    #text1{
+        font-size: 30px;
+        text-align: center;
+        padding-left: 0%;
+    }
+    #img{
+        margin-top: 60px;
+        height: 245px;
+        width: 220px;
+        float: none;
     }
     #menu{
         width: 160px;
@@ -383,17 +465,109 @@ h3{
         display: none;
     }
 }
-@media only screen and (max-height: 854px) and (min-height: 640px) and (max-width: 499px) and (min-width: 200px){
+@media only screen and (max-height: 700px) and (min-height: 630px) and (max-width: 499px) and (min-width: 200px){
     #text{
-        font-size: 30px;
+        padding-top: 150px;
+    }
+    #img{
+        margin-top: 110px;
+        height: 240px;
+        width: 240px;
+        float: none;
+    }
+    #arrow {
+        margin-top: 10px;
+        animation: drop 0.7s ease-in-out alternate-reverse infinite;
+    }
+    @keyframes drop{
+        0%{
+            padding-top: 0px;
+        }
+        100%{
+            padding-top: 10px;
+        }
+    }  
+    #pick{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-height: 800px) and (min-height: 701px) and (max-width: 499px) and (min-width: 200px){
+    #text{
+        padding-top: 200px;
     }
     #change{
+        font-size: 45px;
+    }
+    #text1{
         font-size: 30px;
     }
-    #moo{
+    #arrow{
+        font-size: 30px;
+        margin-top: 10px;
+        animation: drop 0.7s ease-in-out alternate-reverse infinite;
+    }
+    #img{
+        margin-top: 100px;
+        height: 280px;
+        width: 300px;
+        float: none;
+    }
+    @keyframes drop{
+        0%{
+            padding-top: 0px;
+        }
+        100%{
+            padding-top: 10px;
+        }
+    }  
+}
+@media only screen and (max-height: 854px) and (min-height: 801px) and (max-width: 499px) and (min-width: 200px){
+    #text{
+        padding-top: 160px;
+    }
+    #change{
+        font-size: 45px;
+    }
+    #text1{
         font-size: 30px;
     }
-    #simple{
+    #arrow{
         font-size: 30px;
+        margin-top: 10px;
+        animation: drop 0.7s ease-in-out alternate-reverse infinite;
+    }
+    #img{
+        margin-top: 200px;
+        height: 300px;
+        width: 300px;
+        float: none;
+    }
+    @keyframes drop{
+        0%{
+            padding-top: 0px;
+        }
+        100%{
+            padding-top: 10px;
+        }
+    }  
+}
+@media only screen and (max-height: 320px) and (max-width: 499px) and (min-width: 200px){
+    #img{
+        margin-top: 0px;
+        height: 170px;
+        width: 150px;
+        float: none;
+    }
+    #text{
+        padding-top: 40px;
+    }
+    #text1{
+        font-size: 20px;
+    }
+    #count{
+        font-size: 20px;
+        height: 100px;
+        margin: 0px 10px;
+        padding: 0px;
     }
 }

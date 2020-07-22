@@ -10,11 +10,11 @@ icon.addEventListener('click', function(){
 })
 setInterval(function(){
     var i = document.getElementById("change").innerHTML
-    if(i == "HAHA !"){
-        document.getElementById("change").innerHTML = "LICIOUS"
-    }else if(i == "LICIOUS"){
-        document.getElementById("change").innerHTML = "SOME..."
+    if(i == "GROW..."){
+        document.getElementById("change").innerHTML = "DRINK..."
+    }else if(i == "DRINK..."){
+        document.getElementById("change").innerHTML = "LIVE..."
     }else{
-        document.getElementById("change").innerHTML = "HAHA !"
+        document.getElementById("change").innerHTML = "GROW..."
     }
 }, 3000)
